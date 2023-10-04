@@ -1,14 +1,14 @@
+import { BtnWrapper, FeedbackBtn } from "./FeedbackOptions.styled";
+
 export const FeedbackOptions = ({options, onLeaveFeedback}) => {
     return (
-        <div>
+        <BtnWrapper>
             {options.map(option => 
-            <button type="button" key ={option}
+            <FeedbackBtn type="button" key ={option}
               onClick={() => onLeaveFeedback(option)}>
                 {option}
-            </button>
+            </FeedbackBtn>
             )}
-        </div>
-    )
-   
-        
-}
+        </BtnWrapper>
+    );        
+};
